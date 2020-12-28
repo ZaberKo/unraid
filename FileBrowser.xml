@@ -69,15 +69,4 @@
       <Mode/>
     </Variable>
   </Environment>
-  <Config Name="Host Port 1" Target="8082" Default="8082" Mode="tcp" Description="Container Port: 8082" Type="Port" Display="always" Required="true" Mask="false">8082</Config>
-  <Config Name="Host Port 2" Target="8082" Default="8082" Mode="udp" Description="Container Port: 8082" Type="Port" Display="always" Required="true" Mask="false">8082</Config>
-
-  <Config Name="PUID" Target="PUID" Default="1000" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="false" Mask="false">1000</Config>
-  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
-  <Config Name="FB_SSL" Target="FB_SSL" Default="on/off" Mode="" Description="Container Variable: SSL" Type="Variable" Display="always" Required="false" Mask="false">on</Config>
-  <Config Name="UMASK_SET" Target="UMASK_SET" Default="000" Mode="" Description="Container Variable: UMASK_SET" Type="Variable" Display="always" Required="false" Mask="false">000</Config>
-  <Config Name="WEB_PORT" Target="WEB_PORT" Default="8082" Mode="" Description="Container Variable: WEB_PORT" Type="Variable" Display="always" Required="false" Mask="false">8082</Config>
-  
-  <Config Name="AppData Config Path" Target="/config" Default="/mnt/user/appdata/FileBrowser" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/FileBrowser</Config>
-  <Config Name="Data Path" Target="/myfiles" Default="Path that you want manage" Mode="rw" Description="Container Path: /myfiles" Type="Path" Display="always" Required="true" Mask="false">Path that you want manage</Config>
 </Container>
