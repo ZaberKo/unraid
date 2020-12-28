@@ -7,7 +7,7 @@
   <Project>https://hub.docker.com/r/80x86/filebrowser</Project>
   <Overview>filebrowser</Overview>
   <Description>
-    使用荒野无灯大神的镜像
+    Use TTYS3 build
   </Description>
   <Category>Cloud: Network:Web Status:Stable</Category>
   <WebUI>http://[IP]:[PORT:8082]</WebUI>
@@ -39,7 +39,7 @@
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>想管理的路径</HostDir>
+      <HostDir>Path that you want manage</HostDir>
       <ContainerDir>/myfiles</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
@@ -56,8 +56,8 @@
       <Mode/>
     </Variable>
     <Variable>
-      <Value>on或off</Value>
-      <Name>SSL</Name>
+      <Value>on/off</Value>
+      <Name>FB_SSL</Name>
       <Mode/>
     </Variable>
     <Variable>
@@ -71,4 +71,12 @@
       <Mode/>
     </Variable>
   </Environment>
+  <Config Name="Host Port 1" Target="8082" Default="8082" Mode="tcp" Description="Container Port: 8082" Type="Port" Display="always" Required="true" Mask="false">8082</Config>
+  <Config Name="Host Port 2" Target="8082" Default="8082" Mode="udp" Description="Container Port: 8082" Type="Port" Display="always" Required="true" Mask="false">8082</Config>
+  <Config Name="Key 1" Target="PUID" Default="1000" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="false" Mask="false">1000</Config>
+  <Config Name="Key 2" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
+  <Config Name="FB_SSL" Target="FB_SSL" Default="on/off" Mode="" Description="Container Variable: SSL" Type="Variable" Display="always" Required="false" Mask="false">on</Config>
+  <Config Name="UMASK_SET" Target="UMASK_SET" Default="000" Mode="" Description="Container Variable: UMASK_SET" Type="Variable" Display="always" Required="false" Mask="false">000</Config>
+  <Config Name="Key 5" Target="WEB_PORT" Default="8082" Mode="" Description="Container Variable: WEB_PORT" Type="Variable" Display="always" Required="false" Mask="false">8082</Config>
+  <Config Name="AppData Config Path" Target="/config" Default="/mnt/user/appdata/FileBrowser" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/FileBrowser</Config>
 </Container>
